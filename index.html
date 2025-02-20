@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google font cdn -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <!-- daisy ui + tailwind cdn -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'main_color':'#0286e7',
+              }
+            }
+          }
+        }
+      </script>
+        <!-- font awesome cdn -->
+        <script src="https://kit.fontawesome.com/d7b7563d24.js"
+            crossorigin="anonymous"></script>
+        <style>
+        .poppins-font {
+            font-family: "Poppins", serif;
+        }
+       </style>
+
+        <title>MetLeaf</title>
+        </head class="poppins-font">
+        <body>
+            <header>
+                <!-- header nav section -->
+                <nav class="bg-main_color">
+                    <div
+                        class="container mx-auto flex bg-main_color p-3 font-semibold uppercase text-white gap-7">
+                        <div
+                            class="flex items-center gap-2 border-r border-r-white pr-4 border-opacity-50 ">
+                            <a
+                                class="hover:text-orange-600 ease-in duration-500 cursor-pointer ">
+                                <i
+                                    class="fa-regular fa-user text-sm pr-1 text-sm"></i>
+                                login / register
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                class="hover:text-orange-600 ease-in duration-500 cursor-pointer">
+                                <i class="fa-regular fa-heart"></i>
+                                My Wishlist</a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- header logo section -->
+                <div
+                    class="container mx-auto pt-12 pb-12 flex justify-between items-center">
+                    <div class="logo">
+                        <img src="./image/logo.png" alt>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="search relative">
+                            <input type="text" placeholder="Search Products..."
+                                class="  w-[550px] text-xl text-black border-[3px] border-main_color rounded-full pt-4 pb-4 pl-7 placeholder-black ">
+                            <div
+                                class="absolute bg-main_color rounded-full flex items-center justify-center w-20 h-[52px] top-[7px] bottom-0 left-[462px] right-0 ">
+                                <i
+                                    class="fa-solid fa-magnifying-glass text-white hover:text-orange-600 ease-in duration-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="wishlist">
+                            <div
+                                class="bg-main_color rounded-full flex items-center justify-center w-14 h-14 top-[7px] bottom-0 left-[312px] right-0 mt-1">
+                                <a href><i
+                                        class="fa-regular fa-heart text-white text-3xl hover:text-orange-600 ease-in duration-500 cursor-pointer"></i></a>
+                            </div>
+                        </div>
+                        <div class="relative cart pt-0">
+                            <div
+                                class="w-[315px] text-xl text-black border-[3px] border-main_color rounded-full pt-4 pb-4 pl-7 ">
+                                <h4 class="pl-9">Total: ৳ 0</h4>
+                            </div>
+                            <div
+                                class="absolute bg-main_color rounded-full flex items-center justify-center w-[53px] h-[53px]  top-[6px] bottom-0 left-[7px] right-0 ">
+                                <i
+                                    class="fa-solid fa-cart-shopping text-white hover:text-orange-600 ease-in duration-500 cursor-pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--category section-->
+                <div class="bg-main_color">
+                    <div
+                        class="container mx-auto flex bg-main_color p-5 font-semibold uppercase text-white gap-9">
+                        <ul class="flex gap-6 font-medium text-base">
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">Categories</a></li>
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">Home</a></li>
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">Contact</a></li>
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">For
+                                    Order : 01777817417</a></li>
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">For
+                                    Service : 01782175152</a></li>
+                            <li><a href
+                                    class="hover:text-orange-600 ease-in duration-500 cursor-pointer hover:underline ">Catalog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <!-- banner section -->
+                <div class="carousel w-full">
+                    <div id="slide1" class="carousel-item relative w-full">
+                        <img
+                            src="./image/banner1.png"
+                            class="w-full" />
+                        <div
+                            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide4" class="btn btn-circle">❮</a>
+                            <a href="#slide2" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide2" class="carousel-item relative w-full">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                            class="w-full" />
+                        <div
+                            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide1" class="btn btn-circle">❮</a>
+                            <a href="#slide3" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide3" class="carousel-item relative w-full">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                            class="w-full" />
+                        <div
+                            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide2" class="btn btn-circle">❮</a>
+                            <a href="#slide4" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide4" class="carousel-item relative w-full">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                            class="w-full" />
+                        <div
+                            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                            <a href="#slide3" class="btn btn-circle">❮</a>
+                            <a href="#slide1" class="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container mx-auto text-xl pt-9 ">
+                    <p>আমাদের Delivery Man আপনার বাসায় গিয়ে পণ্য ডেলিভারি+Setup
+                        করার পর আপনি সব বুঝে পেয়ে টাকা পরিশোধ করবেন।কল করুন
+                        01777817417 visit: www.metleaf.org</p>
+                    <p class="pt-6">Showing all 9 results</p>
+                </div>
+
+                <!-- product card section -->
+                <div class="container mx-auto  p-3 grid grid-cols-3 ">
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card bg-base-100 w-[470px]  shadow-xl transition-transform duration-1000 hover:translate-y-[-15px] mt-6">
+                        <figure class="px-0 pt-10 ">
+                            <img
+                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title hover:text-[#dd3333] cursor-pointer">24″METLEAF SMART/WIFI/ANDROID
+                                LED TELEVISION</h2>
+                            <p
+                                class="text-xl text-[#dd3333] font-bold pt-3 pb-3">৳
+                                15,900</p>
+                            <div class="card-actions">
+                                <button
+                                    class="btn bg-main_color text-white text-xl hover:bg-[#dd3333]">Buy
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-[#222222] mt-36">
+                <div
+                    class="container mx-auto flex  p-3 pt-20 pb-12 text-[#949494]">
+                    <!-- footer left part -->
+                    <div class="flex-1 space-y-6">
+                        <div>
+                            <img src="./image/logo.png" alt>
+                        </div>
+                        <div class="flex  items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-2xl pt-1"></i>
+                            <p class="text-xl">9th floor, Shah Chandrapuri Garden City Market,
+                                Sonirakra, Mirdhabari<br>Road, Jatrabari-1236,
+                                Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="flex  items-center gap-3">
+                            <i class="fa-solid fa-phone text-xl pt-1"></i>
+                            <p class="text-xl">01777 817 417</p>
+                        </div>
+                        <div class="flex  items-center gap-3">
+                            <i class="fa-solid fa-paper-plane text-xl pt-1"></i>
+                            <p class="text-xl">metleaf.com@gmail.com</p>
+                        </div>
+                        <div class="flex  items-center gap-3">
+                            <i class="fa-regular fa-clock text-2xl pt-1"></i>
+                            <p class="text-xl">Every Day 9AM-9PM</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <div
+                                class="bg-main_color rounded-full flex items-center justify-center w-11 h-11 hover:bg-[#dd3333] ease-in duration-500 cursor-pointer">
+                                <i
+                                    class="fa-brands fa-facebook-f text-white text-xs "></i>
+                                    
+                            </div>
+
+                            <div
+                                class="bg-main_color rounded-full flex items-center justify-center w-11 h-11 hover:bg-[#dd3333] ease-in duration-500 cursor-pointer">
+                                <i
+                                    class="fa-brands fa-instagram text-white text-xs "></i>
+                            </div>
+
+                            <div
+                                class="bg-main_color rounded-full flex items-center justify-center w-11 h-11 hover:bg-[#dd3333] ease-in duration-500 cursor-pointer">
+                                <i
+                                    class="fa-brands fa-youtube text-white text-xs "></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer Right part -->
+                    <div class="flex-1">
+                        <p class="text-xl pt-2">MetLeaf হচ্ছে একটি বাংলাদেশী ব্র্যান্ড; যার সদর দপ্তর
+                            ঢাকায় অবস্থিত। MetLeaf গ্রুপ এর<br> প্রায় সকল পণ্য
+                            MetLeaf নামে নামে বাজারজাত করা হয় । MetLeaf
+                            ইলেক্ট্রনিক্স হচ্ছে এই<br> গ্রুপের অধীনস্থ শাখা।
+                            <br>
+                            <br>
+                            <br>
+                            Our Vision
+                            <br>
+                            <br>
+                            <br>
+                            At Metleaf, our vision is to be Earth’s most
+                            customer-centric company; to <br> build a place where
+                            people can come to find and discover virtually all
+                            types <br> of branded products, they want to buy
+                            online.</p>
+                    </div>
+
+                </div>
+            </footer>
+        </body>
+    </html>
